@@ -1,6 +1,8 @@
 \documentclass{beamer}
 \usepackage{minted}
+\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
+\setbeamertemplate{navigation symbols}{}
 
 \title{\LaTeX}
 
@@ -64,7 +66,6 @@ except KeyboardInterrupt:
 \end{frame}
 
 \begin{frame}
-
 tlmgr update --list
 
 tlmgr update --self
@@ -72,6 +73,10 @@ tlmgr update --self
 tlmgr update --all
 
 tlmgr uninstall
+\begin{figure}{Fig. 1: I got this off of reddit.}
+\centering
+\includegraphics[height=2.5in]{picture1}
+\end{figure}
 \end{frame}
 
 % bash stuff
