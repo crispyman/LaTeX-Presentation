@@ -4,3 +4,5 @@ latex-presentation: beamer.tex
 	fortune | cowsay >> cowsay
 	echo "\end{minted}" >> cowsay
 	pdflatex -shell-escape beamer.tex
+    latex -shell-escape beamer.tex
+    
