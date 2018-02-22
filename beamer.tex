@@ -1,5 +1,5 @@
 \documentclass{beamer}
-
+\usepackage{minted}
 \usepackage[utf8]{inputenc}
 
 \title{\LaTeX}
@@ -35,6 +35,56 @@ Framy stuff.
 \end{verbatim}
 
 
+\end{frame}
+
+% Python3 code
+\begin{frame}[fragile]
+
+% must install pygments for minted to work can be 2 or 3
+% run latex compiler with -shell-escape as well
+\begin{minted}{python3}
+
+#Leibniz formula
+
+pi = 0
+x = 0
+iterations = 10000
+try:
+        for x in range(iterations):
+                pi = pi + 2 / ((4*x+1) * (4*x+3))
+        print(pi*4)
+
+except KeyboardInterrupt:
+        print(x)
+        print(pi*4)
+
+
+\end{minted}
+
+\end{frame}
+
+\begin{frame}
+
+tlmgr update --list
+
+tlmgr update --self
+
+tlmgr update --all
+
+tlmgr uninstall
+\end{frame}
+
+% bash stuff
+\begin{frame}[fragile]
+% must install pygments for minted to work can be 2 or 3
+% run latex compiler with -shell-escape as well
+\input{cowsay}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{minted}{latex}
+\LaTeX
+\end{minted}
 \end{frame}
 
 \end{document}
