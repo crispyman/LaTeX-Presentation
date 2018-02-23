@@ -1,8 +1,7 @@
 SHELL:=/bin/bash
 latex-presentation: beamer.tex
-	echo "\begin{minted}{brainfuck}" > cowsay
+	echo "\begin{verbatim}" > cowsay
 	fortune | cowsay >> cowsay
-	echo "\end{minted}" >> cowsay
+	echo "\end{verbatim}" >> cowsay
 	pdflatex -shell-escape beamer.tex
-    latex -shell-escape beamer.tex
     
