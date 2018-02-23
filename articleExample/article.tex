@@ -1,0 +1,54 @@
+\documentclass{article}
+
+% sets document info, not neccessary 
+\title{Title of my document}
+\date{2017-09-01}
+\author{John Doe}
+
+\begin{document}
+% makes a title page
+\maketitle
+% prevents page numbers from being counted
+\pagenumbering{gobble}
+\newpage
+%generates and prints out a table of contents
+\tableofcontents
+\newpage
+% use arabic ie. numeric 1, 2, 3... page numbers
+% since gobble was used previously this will start
+% counting at 1
+\pagenumbering{arabic}
+
+% first level of organisation
+% then subSection
+% then subSubSection
+% then paragraph
+% then subParagraph
+%
+% part and chapter are avaiable in doctype
+% book and they are level -1 and 0
+\section{Section}
+
+Hello World!
+
+\subsection{SubSection}
+
+Stucturing a document is easy!
+
+\subsubsection{SubSubSection}
+
+More text.
+
+\paragraph{Paragraph}
+
+Some more text.
+
+\subparagraph{SubParagraph}
+
+Even more text.
+\subsubsection{SubSubSection2}
+I'm back!\footnote{\label{myfootnote}And he is green with envy!}
+
+\section{Another section}
+
+\end{document}
