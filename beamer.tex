@@ -51,7 +51,7 @@ Latex is acutaly a collection of macros built ontop of TeX to make it useable fo
 \frametitle{Types of documents.}
 % spaces out the name of the document type
 % and the description of the document type
-% those two lines matched up unintentionaly
+% those two lines matched up unintentionaly^
 \renewcommand*{\arraystretch}{1.4}
 % acutaly creates a table with two seperate colums
 \begin{longtable}{l p{3 in}}
@@ -68,10 +68,13 @@ beamer: &      For writing presentations (like this beamer). \\
 \begin{frame}[fragile]
 \frametitle{A frame}
 % \verb is used to tell LaTeX not to
-% interprite text this is an inline example.
+% interpret text this is an inline example.
 {\LaTeX} or \verb|\LaTeX|
 \begin{multicols}{2}
+% minted handles syntax highlighting
 \begin{minted}{latex}
+% Verbatem enviroment that would
+% start a paper or something
 \begin{verbatim}
 \documentclass{article}
 \title{A paper on how to
@@ -129,7 +132,10 @@ except KeyboardInterrupt:
 
 \end{frame}
 %Page 6
-% amsmath is used for this
+% amsmath is used to make all
+% the math stuff look nice
+% LaTeX has some builtin math
+% stuff but amsmath makes it better
 \begin{frame}[fragile]
 \begin{align*}
 \sin A \cos B &= \frac{1}{2}\left[ \sin(A+B)+\sin(A+B) \right] \\
@@ -137,10 +143,16 @@ except KeyboardInterrupt:
 \cos A \cos B &= \frac{1}{2}\left[ \cos(A+B)+\cos(A+B) \right] \\
 \end{align*}
 \[
-\lim_{x \to h} \frac{f(x + h) - f(x)}{h}
+f' (x)= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
 \]
+\verb|f' (x)= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}|
 \end{frame}
 % Page 7
+% if you ever feel the urge to 
+% these commands will
+% list avaiable updates
+% update the update tool
+% update the packages.
 \begin{frame}
 tlmgr update --list
 
@@ -149,8 +161,12 @@ tlmgr update --self
 tlmgr update --all
 
 tlmgr uninstall
+% figure enviorment is for displaying graphics 
 \begin{figure}{Fig. 1: I got this off of reddit.}
 \centering
+% LaTeX scales images if you give a single value
+% if you just give it an image it will put it on the
+% page full size even if it goes off the page
 \includegraphics[height=2.5in]{picture1}
 \end{figure}
 \end{frame}
@@ -166,6 +182,23 @@ tlmgr uninstall
 \begin{minted}{latex}
 \LaTeX
 \end{minted}
+\end{frame}
+
+\begin{frame}
+\centering
+%Huge is the largest font size macro
+% you can set larger fonts useing an enviroment
+\Huge
+\textbf{
+Questions?
+}
+
+
+% tiny is the smallest font size macro see above for smaller
+\tiny
+\textit{
+or not
+}
 \end{frame}
 
 \end{document}
