@@ -1,3 +1,4 @@
+
 \documentclass{beamer}
 % requres pygmentize to be installed on system
 % also requires you to use -shell-escape flag
@@ -14,10 +15,21 @@
 \usepackage{longtable, multicol}
 % Allows better math stuff
 \usepackage{amsmath}
+% creates clickable hyper links
+%\usepackage{hyperref}
 
 % removes navigation button from bottom of each
 % page of the presentation
 \setbeamertemplate{navigation symbols}{}
+
+% A kinda ugly theme
+%\usetheme{Warsaw}
+
+% Creates a file in build directory
+%\begin{filecontents*}{shell.sh}
+%#!/usr/bin/env sh
+%/usr/bin/make
+%\end{filecontents*}
 
 % \LaTeX is a macro that prints the LaTeX symbol
 \title{\LaTeX}
@@ -38,9 +50,8 @@
 % explains what latex is
 \begin{frame}
 \frametitle{What is \LaTeX?}
-LaTeX is a typesetting system, desgned to prevent the document writer from screwing everything up.
-Latex is acutaly a collection of macros built ontop of TeX to make it useable for document writers, LaTeX. Instead of visually formatting your text, you enter your document text intertwined with LaTeX commands in a text file. You then run TeX to produce formatted output, such as a PDF file. Thus, in contrast to standard word processors, your document is a separate file that does not pretend to be a representation of the final typeset output, and so can be easily edited and manipulated. 
-
+% WYSIWG what you see is what you get
+LaTeX is a typesetting system, desgned to seperate content and formating.
 \end{frame}
 % Page 3
 % talks about common types of documents
@@ -66,7 +77,7 @@ beamer: &      For writing presentations (like this beamer). \\
 
 % Page 4
 \begin{frame}[fragile]
-\frametitle{A frame}
+\frametitle{starting a Document}
 % \verb is used to tell LaTeX not to
 % interpret text this is an inline example.
 {\LaTeX} or \verb|\LaTeX|
@@ -88,6 +99,7 @@ write papers.}
 \tableofcontents
 \newpage
 \pagenumbering{arabic}
+
 
 \section{Section}
 Hello World!
@@ -175,30 +187,34 @@ tlmgr uninstall
 \begin{frame}[fragile]
 %input adds text from outside document to your latex
 % document if it contains latex code it is evaluated.
+% Is supposed to rebuild the latex document
+%\href{run:/usr/bin/make}{makestuff}
 \input{cowsay}
 \end{frame}
 %Page 9
-\begin{frame}[fragile]
-\begin{minted}{latex}
-\LaTeX
-\end{minted}
-\end{frame}
-
 \begin{frame}
 \centering
 %Huge is the largest font size macro
-% you can set larger fonts useing an enviroment
+% you can set arbitrary font size useing an enviroment
 \Huge
 \textbf{
 Questions?
 }
 
 
-% tiny is the smallest font size macro see above for smaller
+% tiny is the smallest font size macro
+% you can set arbitrary font size useing an enviroment
 \tiny
 \textit{
 or not
 }
+\end{frame}
+\begin{frame}[fragile]
+\begin{itemize}
+\pause \item this is a Beamer
+\pause \item Beamers are PDF's
+\pause \item Each of these things is its own page in the PDF
+\end{itemize}
 \end{frame}
 
 \end{document}

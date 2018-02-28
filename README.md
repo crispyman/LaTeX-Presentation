@@ -1,9 +1,12 @@
 # LaTeX-Presentation
-A presentation on LaTeX
+A presentation on LaTeX with examples of other documents
 
 # TODO #
-* Add a bash shell that generates file and use "\input{file}"
-to add a second document to the first.
+* Move some stuff to a second document and use "/input{}".
 
-* Work on make file have it call shell script.
-* Show code with syntax hilighting.
+# SETUP #
+* install python pygments for ether python2 or python3, there is a ubuntu package
+you can use easy_install, pip, or anaconda, or something else.
+
+* if you don't use the make file run with -shell-escape and note
+that the cow will always say the same thing.
